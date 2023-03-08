@@ -1,0 +1,7 @@
+alter table `Usuarios_password` add FOREIGN key (`id_usuario`) REFERENCES `Usuarios` (`id_usuario`) 
+alter table `Usuarios` add FOREIGN key (`id_tipo_documento`) REFERENCES `Tipos_documento` (`id_tipo_documento`) 
+
+alter table `Actividades` add FOREIGN key (`id_usuario`) REFERENCES `Usuarios` (`id_usuario`) 
+alter table `Actividades` add FOREIGN key (`id_proyecto`) REFERENCES `Proyectos` (`id_proyecto`) 
+
+ALTER TABLE `Actividades` ADD PRIMARY KEY( `id_usuario`, `id_proyecto`, `fecha_actividad`); 

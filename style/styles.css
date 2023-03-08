@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-size: 1rem;
+    
+}
+
+div /*BORRAR */
+{
+    border: 1px solid red;
+}
+
+#logo_contenedor
+{
+    display: inline-block;
+}
+
+#index_form
+{
+    text-align: center; 
+    margin-top: 60px;    
+}
+
+#logo
+{    
+    width: 120px;
+    height: 150px;
+    margin: 10px;
+}
+
+#herramientas_usuario
+{
+    padding-top: 20px;
+    float: right;
+    display: inline-block;
+}
+
+#herramientas_usuario_imagenUsuario
+{
+    width: 50px;
+    height: 50px;
+}
+
+#contenedor_boton_regresar
+{
+    text-align: left;
+    margin-top: 3px;
+}
+
+#boton_regresar
+{
+    width: 40px;
+    height: 40px;
+}
+
+#herramientas_usuario_boton_cerrar
+{
+    width: 30px;
+    height: 30px;    
+}
+
+#filtros_mes_anio
+{
+    margin-top:40px ;    
+    text-align: center;
+    color: darkslategray;
+    font-weight: bold;
+}
+
+#tabla_datos_actividades
+{
+    margin-top: 50px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+
+#titulo_accion
+{
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    background-color:cornflowerblue;
+}
+
+
+#operacion_ok
+{
+    color: dodgerblue;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 40px;
+    border: 5px solid;
+}
+
+#operacion_error
+{
+    color: red;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 40px;
+    border: 5px solid;
+}
+
+.boton{
+    border-radius: 5px 2px;
+    border: 0cm;
+    padding: 4px;
+    margin-top: 10px;
+    background-color:darkcyan;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton:hover
+{
+    background-color:deepskyblue ;
+}
+
+.herramientas_usuario_texto
+{
+    color: darkslategray;
+    font-weight: bold;
+}
+
+.campoTexto
+{
+    margin: 5px;
+    border-radius: 6px;
+    height: 30px;
+
+}
+
+.botonSubmit
+{
+    border-radius: 5px 2px;
+    border: 0cm;
+    padding: 10px;
+    margin-top: 10px;
+    background-color:lightseagreen;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.botonSubmit:hover
+{
+    background-color:deepskyblue ;
+}
+
+.msj_error
+{
+    display: block;
+    color:crimson;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.tabla_datos_td_dias_mes
+{
+    background-color: orange;
+    width:35px;
+    padding: 5px;
+    text-align: center;    
+    font-weight: bold;
+}
+
+.tabla_datos_td_dia_horas
+{
+    background-color: lightseagreen;
+    text-align: center;
+    
+    font-weight: bold;
+}
+
+
+
+body
+{
+    background-color:#f0f2f5;
+}
+
+a
+{
+    text-decoration: none;
+    color: darkslategray;
+
+}
+
+form
+{
+    border-radius: 15px;
+    display: inline-block;
+    width: 500px;        
+    padding: 10px;
+    background-color: white;
+    
+}
+
+label
+{
+    text-align:center;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 3px;
+    background-color:khaki;
+    padding: 7px 0px;
+}
