@@ -11,7 +11,7 @@
         $datos_validaregistro= mysqli_fetch_array($datos_validaregistro);
         if( ((int) $datos_validaregistro["cant_actividades"]) == 0)
         {
-            echo "Ingresaaaaa";            
+               
             $sql_registro_actividad="INSERT INTO `Actividades` (`id_usuario`, `id_proyecto`, `fecha_actividad`, `descripcion_actividad`, `cantidad_horas_actividad`, 
             `fecha_registro_actividad`) VALUES ('".$_SESSION["idUsuario"]."', '".$_POST["proyecto"]."', '".$_POST["fecha"]."', '".$_POST["actividad"]."', '".$_POST["horas"]."', '". date("Y-m-d")."');";
             if(!mysqli_query($con, $sql_registro_actividad))
