@@ -52,7 +52,7 @@
 
     <div id="herramientas_usuario" >
         <div> <img src="img/usu.png" alt="Imagen usuario" id="herramientas_usuario_imagenUsuario" > <span class="herramientas_usuario_texto" ><?php echo $_SESSION["nombreUsuario"] ?></span> </div>
-        <div><a href="cerrarSession.php"> <img src="img/cerrar.png" alt="Cerrar sesiòn" id="herramientas_usuario_boton_cerrar" > <span class="herramientas_usuario_texto" > Cerrar sesiòn</a></span></div>
+        <div><a href="cerrarSession.php"> <img src="img/cerrar.png" alt="Cerrar sesiòn" class="icono_navegacion" title="Cerrar sesiòn" > <span class="herramientas_usuario_texto" > Cerrar sesiòn</a></span></div>
     </div>
 </header>
 
@@ -98,8 +98,8 @@
             <table border="1"  >
                 <tbody>
                     <tr>
-                        <td rowspan="2">Proyectos</td>
-                        <td colspan="<?=$cantidad_dias_mes_consultar+2 ?>">Dias / horas</td>                        
+                        <td rowspan="2" class="tabla_datos_actividades_titulo" >Proyectos</td>
+                        <td colspan="<?=$cantidad_dias_mes_consultar+2 ?>" class="tabla_datos_actividades_titulo" >Dias / horas</td>                        
                     </tr>
                     <tr>
                         <?php
@@ -121,7 +121,7 @@
                             {   
                                 ?>
                                 <tr>
-                                <td><?php echo $datos_proyectos_usuario["nombre_proyecto"]; ?></td>
+                                <td class="tabla_datos_actividades_proyectos"  ><?php echo $datos_proyectos_usuario["nombre_proyecto"]; ?></td>
 
                                 <?php
                                     for($i=1; $i<=$cantidad_dias_mes_consultar;$i++)
@@ -132,19 +132,19 @@
                                         {
                                             $total_horas_registradas_dia[$i]+=( (int) $datos_proyectos_usuario["cantidad_horas_actividad"]); //REALIZA LA SUMATORIA DE LAS HORAS REGISTRADAS X DIA
 
-                                            echo "<td class='tabla_datos_td_dia_horas'>". $datos_proyectos_usuario["cantidad_horas_actividad"]."</td>";                                            
+                                            echo "<td class='tabla_datos_td_dia_horas'> <span title='Actividad: \n". $datos_proyectos_usuario["descripcion_actividad"]."' >". $datos_proyectos_usuario["cantidad_horas_actividad"]."</span></td>";                                            
                                         }
                                         else
                                         {
                                             echo "<td></td>";
                                         }
                                         
-                                        ?></td>
+                                        ?>  </td>
                                 <?php
                                     }
                                 ?>
-                                    <td></td>
-                                    <td></td>
+                                    <td> <a href=""><img src="img/editar.png" alt="Editar" title="Editar Actividades"  class="icono_navegacion"> </a></td>
+                                    <td> <a href=""><img src="img/eliminar.png" alt="Eliminar" title="Eliminar Actividades"  class="icono_navegacion"> </a> </td>
                                 <tr>
                                 <?php
                             } 
@@ -152,12 +152,12 @@
                         
                     
                     <tr>
-                        <td>Total horas</td>
+                        <td  class="tabla_datos_actividades_titulo">Total horas</td>
                         <?php
                             for($i=1; $i<=$cantidad_dias_mes_consultar;$i++)
                             {  
                         ?>
-                                <td>
+                                <td class="tabla_datos_actividades_td_total_horas" >
                         <?php
                                 if($total_horas_registradas_dia[$i]!=0)                                            
                                     echo $total_horas_registradas_dia[$i];

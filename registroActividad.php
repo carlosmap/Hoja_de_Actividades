@@ -46,7 +46,7 @@
             </div>
 
             <div>
-                <div id="contenedor_boton_regresar" ><a href="hojaActividades.php" > <img src="img/regresar.png" alt="Regresar" id="boton_regresar" ></a></div>
+                <div id="contenedor_boton_regresar" ><a href="hojaActividades.php" > <img src="img/regresar.png" alt="Regresar" title="Regresar" class="icono_navegacion" ></a></div>
                 <label >Proyecto</label>
 
                 <select name="proyecto" id="proyecto" required >

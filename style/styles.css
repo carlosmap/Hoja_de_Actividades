@@ -48,18 +48,6 @@ div /*BORRAR */
     margin-top: 3px;
 }
 
-#boton_regresar
-{
-    width: 40px;
-    height: 40px;
-}
-
-#herramientas_usuario_boton_cerrar
-{
-    width: 30px;
-    height: 30px;    
-}
-
 #filtros_mes_anio
 {
     margin-top:40px ;    
@@ -136,7 +124,7 @@ div /*BORRAR */
 {
     margin: 5px;
     border-radius: 6px;
-    height: 30px;
+    height: 44px;
 
 }
 
@@ -178,12 +166,47 @@ div /*BORRAR */
 .tabla_datos_td_dia_horas
 {
     background-color: lightseagreen;
+    text-align: center;    
+    font-weight: bold;
+}
+
+.tabla_datos_actividades_titulo
+{
+    background-color:cadetblue;
     text-align: center;
-    
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    padding: 5px;
+}
+
+.tabla_datos_actividades_proyectos
+{
+    background-color:lightsteelblue; 
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    padding: 0 5px ;
+}
+
+.tabla_datos_actividades_td_total_horas
+{
+    background-color:lightgray;
+    text-align: center;
     font-weight: bold;
 }
 
 
+.icono_navegacion
+{
+    width: 30px;
+    height: 30px;    
+}
+
+.icono_navegacion:hover
+{
+    background-color:orange;
+}
 
 body
 {
