@@ -42,12 +42,13 @@
     <div id="index_form">
         <form action="#" method="POST" >
             <div>                
-                <div id="titulo_accion">Registrar Actividad</div>
+                <div class="tabla_datos_actividades_titulo">Registrar Actividad</div>
             </div>
 
             <div>
                 <div id="contenedor_boton_regresar" ><a href="hojaActividades.php" > <img src="img/regresar.png" alt="Regresar" title="Regresar" class="icono_navegacion" ></a></div>
-                <label >Proyecto</label>
+                <label class="index_form_label_campo_formulario" >Proyecto</label>
+                
 
                 <select name="proyecto" id="proyecto" required >
                     <option value="">Seleccione un proyecto</option>
@@ -70,16 +71,16 @@
                 
             </div>
             <div>
-                <label for="fecha">Fecha</label>
+                <label for="fecha" class="index_form_label_campo_formulario" >Fecha</label>
                 <input type="date" id="fecha" name="fecha" required value="<?=$_POST["fecha"]; ?>" >
             </div>
             <div>
-                <label for="horas">Cantidad de horas</label>
+                <label for="horas" class="index_form_label_campo_formulario" >Cantidad de horas</label>
                 <input type="number" id="horas" name="horas" min="1" max="24" size="3" required value="<?=$_POST["horas"]; ?>" >
             </div>
             <div>
                 <div>
-                    <label for="actividad">Actividad</label>
+                    <label for="actividad" class="index_form_label_campo_formulario" >Actividad</label>
                 </div>           
                 <textarea name="actividad" id="actividad" cols="40" rows="10" required ><?=$_POST["actividad"]; ?></textarea>
             </div>
