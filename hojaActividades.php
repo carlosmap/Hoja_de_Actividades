@@ -207,7 +207,7 @@
         </div>
 
         <div id="index_form" >
-            <button class="boton" onclick="location.href='registroActividad.php?m=<?=$_POST["mes"] ?>'" >Registrar Actividad</button>
+            <button class="boton" onclick="location.href='registroActividad.php?m=<?=( ($_POST["mes"] < 10) ? "0".$_POST["mes"] : $_POST["mes"] )  ?>&y=<?=$_POST["ano"] ?>'" >Registrar Actividad</button>
         </div>
 </main>
 
