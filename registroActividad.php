@@ -51,7 +51,7 @@
             echo "<span id='operacion_error' >Por favor diligenciar todos los campos solicitados </span>";
     }
 ?>
-</span>
+
     <div id="index_form">
         <form action="#" method="POST" >
             <div>                

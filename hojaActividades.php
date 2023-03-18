@@ -164,6 +164,7 @@
 
                                                 //IMPRIME LA CANTIDAD DE HORAS REGISTRADAS
                                                 echo "<td class='tabla_datos_td_dia_horas'> <span title='Actividad: \n". $datos_actividades["descripcion_actividad"]."' >". $datos_actividades["cantidad_horas_actividad"]."</span></td>";                                            
+                                                $proyecto=$datos_actividades["id_proyecto"];
 
                                                 //ALMACEN EN datos_actividades LA INFORMACION DE LA ACTIVIDAD REGISTRADA
                                                 $datos_actividades=mysqli_fetch_array($valores_actividades_usuario);
@@ -175,8 +176,8 @@
                                             
                                         }        
                                     ?>  
-                                        <td> <a href=""><img src="img/editar.png" alt="Editar" title="Editar Actividades"  class="icono_navegacion"> </a></td>
-                                        <td> <a href=""><img src="img/eliminar.png" alt="Eliminar" title="Eliminar Actividades"  class="icono_navegacion"> </a> </td>
+                                        <td><a href="upActividades.php?m=<?=( ($_POST["mes"] < 10) ? "0".$_POST["mes"] : $_POST["mes"] )  ?>&y=<?=$_POST["ano"] ?>&p=<?=$proyecto ?>&a=1"><img src="img/editar.png" alt="Editar" title="Editar Actividades"  class="icono_navegacion"> </a></td>
+                                        <td><a href="upActividades.php?m=<?=( ($_POST["mes"] < 10) ? "0".$_POST["mes"] : $_POST["mes"] )  ?>&y=<?=$_POST["ano"] ?>&p=<?=$proyecto ?>&a=2"><img src="img/eliminar.png" alt="Eliminar" title="Eliminar Actividades"  class="icono_navegacion"> </a> </td>
                                     
                                 <tr>
                                 <?php
