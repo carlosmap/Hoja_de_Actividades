@@ -43,7 +43,24 @@
         //ELIMINAR ACTIVIDADES
         if(($_GET["a"]=="2")  && ($_POST["ban"]==1))
         {   
-        //   if($datos_actividades_horas["dia"])
+            while($datos_actividades_horas= mysqli_fetch_array($valores_actividades_horas))
+            {
+                //echo $_POST[$datos_actividades_horas["dia"]]."---".$datos_actividades_horas["dia"]." <BR>";
+
+                if($_POST[$datos_actividades_horas["dia"]]!="")
+                {
+                    $sql_delete_actividades_horas="DELETE FROM Actividades WHERE id_proyecto=".$_GET["p"]." AND id_usuario=".$_SESSION["idUsuario"]." and year(fecha_actividad)=".$_GET["y"]."  and month(fecha_actividad)='".$_GET["m"] ."' and day(fecha_actividad)=".$datos_actividades_horas["dia"];
+                    $del_actividades_horas=mysqli_query($con, $sql_delete_actividades_horas);   
+
+//echo $sql_delete_actividades_horas."<br>".mysqli_error($con);
+                    if(trim(mysqli_error($con))!="")
+                    {   
+                        $error_editando_eliminando="1";                                                
+                        break;
+                    }
+                }
+            }
+            //   if($datos_actividades_horas["dia"])
         }
 
         //SI SE HA PRESENTADO UN ERROR AL ELIMINAR O EDITAR LAS ACTIVIDADES
