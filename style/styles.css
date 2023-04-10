@@ -5,11 +5,11 @@
     font-size: 1rem;
     
 }
-
-div /*BORRAR */
+/*
+div 
 {
     border: 1px solid red;
-}
+} */
 
 #logo_contenedor
 {
@@ -135,7 +135,7 @@ div /*BORRAR */
 #tabla_descripcion_actividades /* TABLA INFERIOR */
 {
     margin: 30px 0;
-    width: 100%;
+    width: 100%;    
     display: grid;
     place-content: center;
 }

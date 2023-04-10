@@ -213,8 +213,9 @@
 </main>
 
 <footer>
+    
     <div id="tabla_descripcion_actividades" >
-        <table border="1"  >
+        <table border="1" id="table_tabla_descripcion_actividades"  >
             <tr>
                 <td  class="tabla_datos_actividades_titulo"  colspan="4" >Actividades registradas en <?=$meses[$mes_consultar]; ?> del <?=$ano_actual ?> </td>
             </tr>
@@ -265,6 +266,7 @@
             
         </table>
     </div>
+    
 </footer>
 
 <?php 

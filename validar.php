@@ -1,13 +1,14 @@
 <?php
     include("conexion.php");
-    
-    if(trim($_POST["usuario"] != "") AND trim($_POST["password"] != "") ){
-        $sql=" SELECT U.id_usuario, U.nombre_usuario FROM Usuarios U
-        INNER JOIN Usuarios_password UP on UP.id_usuario=U.id_usuario     
-        WHERE U.login_usuario = '".$_POST["usuario"]."' and UP.password_usuario='".$_POST["password"]."' and UP.estado_usuario_password=1 and U.estado_usuario=1 ";
 
+    if(trim($_POST["usuario"] != "") AND trim($_POST["password"] != "") ){
+        $sql=" SELECT U.id_usuario, U.nombre_usuario, UP.password_usuario FROM Usuarios U
+        INNER JOIN Usuarios_password UP on UP.id_usuario=U.id_usuario     
+        WHERE U.login_usuario = '".$_POST["usuario"]."' and UP.estado_usuario_password=1 and U.estado_usuario=1 ";
         $valores=mysqli_query($con, $sql);        
-        if($datos= mysqli_fetch_array($valores))
+        $datos= mysqli_fetch_array($valores);
+
+        if( password_verify($_POST["password"] , $datos["password_usuario"]) )
         {   
 
             session_start();
