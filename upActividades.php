@@ -77,7 +77,7 @@
 
         
 
-        header("refresh:5;url=hojaActividades.php");
+        header("refresh:5;url=hojaActividades.php?ano=".$_GET["y"]."&mes=".$_GET["m"]);
         die(); 
     }
 
@@ -94,7 +94,7 @@
             </div>
 
             <div>
-                <div id="contenedor_boton_regresar" ><a href="hojaActividades.php" > <img src="img/regresar.png" alt="Regresar" title="Regresar" class="icono_navegacion" ></a></div>
+                <div id="contenedor_boton_regresar" ><a href="hojaActividades.php?ano=<?=$_GET["y"] ?>&mes=<?=$_GET["m"] ?>" > <img src="img/regresar.png" alt="Regresar" title="Regresar" class="icono_navegacion" ></a></div>
                 <label class="index_form_label_campo_formulario" >Proyecto</label>
                 
                 <?php               

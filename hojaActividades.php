@@ -12,12 +12,23 @@
     $i=1;
     $dia=0; // VARIABLE QUE PERMITE ESTABLECER SI EL CICLO HA CAMBIADO DE DIA EN LA TABLA INFERIOR "Actividades registradas en"
     
+    
 
     //se forma la fecha, para extraher la cantidad de dias del mes
     if( ($_POST["ano"]!="") && ($_POST["mes"]!="")) /* SE CAPTURA EL MES Y AÑO DE LA UNA HOJA DE ACTIVIDADES A CONSULTAR */
     {
+        
         $fecha_consultar=$_POST["ano"]."-".$_POST["mes"]."-01";
         $mes_consultar=$_POST["mes"];
+    }
+    else if( ($_GET["ano"]!="") && ($_GET["mes"]!="") ) //SI SE HA REDIRIGIDO A hojaActividades.php DESDE OTRA PAGINA, SE CARGAN LOS VALORES DE MES Y AÑO, PARA MOSTRAR LAS ACTIVIDADES REGISTRADAS
+                                                        //PARA EL MES Y AÑO CONSULTADOS CON ANTEIORIDAD
+    {
+        $fecha_consultar=$_GET["ano"]."-".$_GET["mes"]."-01";
+        $mes_consultar=$_GET["mes"];
+        $_POST["mes"]=$_GET["mes"];
+        $_POST["ano"]=$_GET["ano"];
+
     }
     else   // SI SE ESTA CARGANDO LA PAGINA POR PRIMERA VEZ, SE CARGA EL MES Y AÑO ACTUAL
     {
@@ -176,8 +187,8 @@
                                             
                                         }        
                                     ?>  
-                                        <td><a href="upActividades.php?m=<?=( ($_POST["mes"] < 10) ? "0".$_POST["mes"] : $_POST["mes"] )  ?>&y=<?=$_POST["ano"] ?>&p=<?=$proyecto ?>&a=1"><img src="img/editar.png" alt="Editar" title="Editar Actividades"  class="icono_navegacion"> </a></td>
-                                        <td><a href="upActividades.php?m=<?=( ($_POST["mes"] < 10) ? "0".$_POST["mes"] : $_POST["mes"] )  ?>&y=<?=$_POST["ano"] ?>&p=<?=$proyecto ?>&a=2"><img src="img/eliminar.png" alt="Eliminar" title="Eliminar Actividades"  class="icono_navegacion"> </a> </td>
+                                        <td><a href="upActividades.php?m=<?=($_POST["mes"] )  ?>&y=<?=$_POST["ano"] ?>&p=<?=$proyecto ?>&a=1"><img src="img/editar.png" alt="Editar" title="Editar Actividades"  class="icono_navegacion"> </a></td>
+                                        <td><a href="upActividades.php?m=<?=($_POST["mes"] )  ?>&y=<?=$_POST["ano"] ?>&p=<?=$proyecto ?>&a=2"><img src="img/eliminar.png" alt="Eliminar" title="Eliminar Actividades"  class="icono_navegacion"> </a> </td>
                                     
                                 <tr>
                                 <?php
@@ -208,7 +219,7 @@
         </div>
 
         <div id="index_form" >
-            <button class="boton" onclick="location.href='registroActividad.php?m=<?=( ($_POST["mes"] < 10) ? "0".$_POST["mes"] : $_POST["mes"] )  ?>&y=<?=$_POST["ano"] ?>'" >Registrar Actividad</button>
+            <button class="boton" onclick="location.href='registroActividad.php?m=<?=($_POST["mes"] )  ?>&y=<?=$_POST["ano"] ?>'" >Registrar Actividad</button>
         </div>
 </main>
 
