@@ -121,6 +121,9 @@
                 <div  class="tabla_datos_actividades_td_total_horas" ><?=$_GET["y"] ?></div>
             </div>
             <div>
+                <div>&nbsp;</div>
+            </div>
+            <div>
                 <div>
                     <table>
                         <tr>                            
@@ -145,7 +148,7 @@
                         <tr>                            
                             <td class="tabla_datos_td_dias_mes" ><?=$datos_actividades_horas["dia"] ?></td>
                             <td class="tabla_datos_actividades_td_total_horas" ><?=$datos_actividades_horas["cantidad_horas_actividad"] ?></td>
-                            <td><textarea name="actividad<?=$datos_actividades_horas["dia"] ?>" id="actividad<?=$datos_actividades_horas["dia"] ?>" cols="33" rows="3" <?=$disabled ?> required ><?=$datos_actividades_horas["descripcion_actividad"] ?></textarea></td>
+                            <td><textarea name="actividad<?=$datos_actividades_horas["dia"] ?>" id="actividad<?=$datos_actividades_horas["dia"] ?>" cols="34" rows="3" <?=$disabled ?> required ><?=$datos_actividades_horas["descripcion_actividad"] ?></textarea></td>
                         <?php 
                             //SI SE VAN A ELIMINAR ACTIVIDADES
                             if($_GET["a"]=="2")

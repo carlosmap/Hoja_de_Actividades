@@ -85,7 +85,7 @@
             <div>
                 <label for="fecha" class="index_form_label_campo_formulario" >Fecha                  
                 </label>
-                <input type="date" id="fecha" name="fecha" required value="<?=$_POST["fecha"]; ?>" min="<?=$_GET["y"]."-".$_GET["m"]."-01" ?>" max="<?=date("Y-m-t", strtotime($_GET["y"]."-".$_GET["m"]."-01")) ?>" >
+                <input type="date" id="fecha" name="fecha" required value="<?=$_POST["fecha"]; ?>" min="<?=$_GET["y"]."-".(($_GET["m"] < 10 )? "0".$_GET["m"] : $_GET["m"]  )."-01" ?>" max="<?=date("Y-m-t", strtotime($_GET["y"]."-".$_GET["m"]."-01")) ?>" >
             </div>
             <div>
                 <label for="horas" class="index_form_label_campo_formulario" >Cantidad de horas</label>
