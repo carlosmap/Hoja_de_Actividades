@@ -144,9 +144,11 @@
             
                 while($datos_actividades_horas= mysqli_fetch_array($valores_actividades_horas2))
                 {
+                    //CONSULTAMOS EL DIA DE LA SEMANA, CON EL FIN DE PINTAR LOS SABADOS Y DOMINGOS
+                    $css_dia=dia_semana($_GET["m"], $datos_actividades_horas["dia"], $_GET["y"]);                    
             ?>                        
                         <tr>                            
-                            <td class="tabla_datos_td_dias_mes" ><?=$datos_actividades_horas["dia"] ?></td>
+                            <td class="<?=$css_dia[0] ?>" ><?=$datos_actividades_horas["dia"]."<br> <label class='inicial_dia_semana' > ".$dias_semana[$css_dia[1]]."</label>" ?></td>
                             <td class="tabla_datos_actividades_td_total_horas" ><?=$datos_actividades_horas["cantidad_horas_actividad"] ?></td>
                             <td><textarea name="actividad<?=$datos_actividades_horas["dia"] ?>" id="actividad<?=$datos_actividades_horas["dia"] ?>" cols="34" rows="3" <?=$disabled ?> required ><?=$datos_actividades_horas["descripcion_actividad"] ?></textarea></td>
                         <?php 

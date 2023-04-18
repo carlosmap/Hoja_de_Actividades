@@ -130,15 +130,20 @@
                     <tr>
                         <?php
                             
+                            
                             $total_horas_registradas_dia= array($cantidad_dias_mes_consultar); //CREA EL ARRAY CON EL TAMAÑO QUE TENGA LOS DIAS DEL MES
                             for($i=1; $i<=$cantidad_dias_mes_consultar;$i++)
                             {
+                                //CONSULTAMOS EL DIA DE LA SEMANA, CON EL FIN DE PINTAR LOS SABADOS Y DOMINGOS
+                                //RETONA EL CCS PARA SABADOS Y DOMINGOS Y EL DIA DE LA SEMANA CORRESPONDIENTE
+                                $css_dia=dia_semana($_POST["mes"], $i, $_POST["ano"]);
+
                                 //CARGA EL ARRAY QUE SUMA LA CANTIDAD DE HORAS REGISTRADAS POR DIA Y QUE SE MUESTRAN EN LA FILA "TOTAL HORAS", CON VALOR 0
                                 $total_horas_registradas_dia[$i]=0; //CARGA EL ARRAY QUE TOTALIZA LA CANTIDAD DE HORAS REGISTRADAS POR MES
 
                                 //MUESTRA LOS DIAS DEL MES
                         ?>
-                                <td class="tabla_datos_td_dias_mes"><?=$i ?></td>
+                                <td class="<?=$css_dia[0] ?>"><?=$i."<br> <label class='inicial_dia_semana' > ".$dias_semana[$css_dia[1]]."</label>" ?> </td>
                         <?php
                             }
                         ?>
@@ -242,6 +247,10 @@
             ?>
                     <tr>
                         <?php
+                            //CONSULTAMOS EL DIA DE LA SEMANA, CON EL FIN DE PINTAR LOS SABADOS Y DOMINGOS
+                            //RETONA EL CCS PARA SABADOS Y DOMINGOS Y EL DIA DE LA SEMANA CORRESPONDIENTE
+                            $css_dia=dia_semana($_POST["mes"], $datos_actividades_horas["dia"], $_POST["ano"]);
+
                             // SI CAMBIA DE DIA, SE REINICIA LA VARIABLE dia
                             if(($dia!=$datos_actividades_horas["dia"]) )                            
                                 $dia=0;                                 
@@ -253,7 +262,7 @@
                                 $dia=$datos_actividades_horas["dia"]; 
                                 
                         ?>
-                            <td rowspan="<?=$datos_actividades_horas["cant_registros_dia"] ?>" class="tabla_datos_td_dias_mes" ><?=$datos_actividades_horas["dia"] ?></td>
+                            <td rowspan="<?=$datos_actividades_horas["cant_registros_dia"] ?>" class="<?=$css_dia[0] ?>" ><?=$datos_actividades_horas["dia"]."<br> <label class='inicial_dia_semana'>".$dias_semana[$css_dia[1]]."</label>" ?></td>
                         <?php
                             }                            
 
@@ -261,7 +270,7 @@
                             if((( (int) $datos_actividades_horas["cant_registros_dia"] )==1) && ($dia==0)  )
                             {
                             ?>
-                                <td class="tabla_datos_td_dias_mes" ><?=$datos_actividades_horas["dia"] ?></td>
+                                <td class="<?=$css_dia[0] ?>" ><?=$datos_actividades_horas["dia"]."<br> <label class='inicial_dia_semana'>".$dias_semana[$css_dia[1]]."</label>" ?></td>
                         <?php
                             
                             }                                           

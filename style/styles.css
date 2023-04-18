@@ -177,6 +177,20 @@ div
     font-weight: bold;
 }
 
+.tabla_datos_td_dias_mes_feriados
+{
+    background-color:lightcoral;
+    width:35px;
+    padding: 5px;
+    text-align: center;    
+    font-weight: bold;
+}
+
+.inicial_dia_semana
+{
+    font-size: 11px; /* x-small; */
+}
+
 .tabla_datos_td_dia_horas
 {
     background-color: lightseagreen;
