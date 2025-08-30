@@ -16,7 +16,7 @@ Este proyecto tiene como finalidad, permitir a los usuarios llevar el registro d
 # 
 
 
-![](https://drive.google.com/thumbnail?id=1T-NP6LuRveaFiwfw9eZAO6W01MloG2S8&sz=w500)
+![](https://drive.google.com/thumbnail?id=17lE_8Wfau2VdWUVKvfsad3SxNAN7rsXv&sz=w500)
  
 
 # 
@@ -28,7 +28,7 @@ Este proyecto tiene como finalidad, permitir a los usuarios llevar el registro d
 # 
 
 
-![](https://drive.google.com/thumbnail?id=1T-NP6LuRveaFiwfw9eZAO6W01MloG2S8&sz=w500)
+![](https://drive.google.com/thumbnail?id=1AhpXchcOM8R2UEw0LwV34IhYGCAk6cEw&sz=w500)
 
 </div>
 
