@@ -33,5 +33,5 @@ Este proyecto tiene como finalidad, permitir a los usuarios llevar el registro d
 </div>
 
 
-## Tecnologias
+## Tecnologías
 Para el desarrollo de este sitio se utilizaron las tecnologías HTML, CSS. PHP y SQL.
